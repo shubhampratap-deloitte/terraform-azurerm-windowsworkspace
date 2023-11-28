@@ -35,5 +35,5 @@ module "vmwindow" {
   subnet_id = "${var.vmwindow_subnet_id}"
   subscription_id = "${var.vmwindow_subscription_id}"
   tenant_id = "${var.vmwindow_tenant_id}"
-  tags = "${var.vmwindow_tags"
+  tags = "${var.vmwindow_tags}"
 }
