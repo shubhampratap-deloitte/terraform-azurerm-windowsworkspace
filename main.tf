@@ -1,6 +1,7 @@
 //--------------------------------------------------------------------
 // Variables
 variable "vmwindow_admin_password" {}
+variable "vmwindow_admin_username" {}
 variable "vmwindow_client_id" {}
 variable "vmwindow_client_secret" {}
 variable "vmwindow_image_os" {}
@@ -13,14 +14,15 @@ variable "vmwindow_size" {}
 variable "vmwindow_subnet_id" {}
 variable "vmwindow_subscription_id" {}
 variable "vmwindow_tenant_id" {}
-
+variable "vmwindow_tags" {}
 //--------------------------------------------------------------------
 // Modules
 module "vmwindow" {
   source  = "app.terraform.io/edj_demo_org_000/vmwindow/azurerm"
-  version = "1.0.6"
+  version = "1.0.19-beta"
 
   admin_password = "${var.vmwindow_admin_password}"
+  admin_username = "${var.vmwindow_admin_username}"
   client_id = "${var.vmwindow_client_id}"
   client_secret = "${var.vmwindow_client_secret}"
   image_os = "${var.vmwindow_image_os}"
@@ -33,4 +35,5 @@ module "vmwindow" {
   subnet_id = "${var.vmwindow_subnet_id}"
   subscription_id = "${var.vmwindow_subscription_id}"
   tenant_id = "${var.vmwindow_tenant_id}"
+  tags = "${var.vmwindow_tags"
 }
