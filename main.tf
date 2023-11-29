@@ -37,3 +37,6 @@ module "vmwindow" {
   tenant_id = "${var.vmwindow_tenant_id}"
   tags = "${var.vmwindow_tags}"
 }
+
+
+
