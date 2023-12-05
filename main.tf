@@ -20,7 +20,7 @@ variable "vmwindow_vm_count" {}
 // Modules
 module "vmwindow" {
   source  = "app.terraform.io/edj_demo_org_000/vmwindow/azurerm"
-  version = "1.0.27"
+  version = "1.0.28"
 
   admin_password = "${var.vmwindow_admin_password}"
   admin_username = "${var.vmwindow_admin_username}"
