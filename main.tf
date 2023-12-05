@@ -15,17 +15,19 @@ variable "vmwindow_subnet_id" {}
 variable "vmwindow_subscription_id" {}
 variable "vmwindow_tenant_id" {}
 variable "vmwindow_tags" {}
+variable "vmwindow_vm_count" {}
 //--------------------------------------------------------------------
 // Modules
 module "vmwindow" {
   source  = "app.terraform.io/edj_demo_org_000/vmwindow/azurerm"
-  version = "1.0.19-beta"
+  version = "1.0.25"
 
   admin_password = "${var.vmwindow_admin_password}"
   admin_username = "${var.vmwindow_admin_username}"
   client_id = "${var.vmwindow_client_id}"
   client_secret = "${var.vmwindow_client_secret}"
   image_os = "${var.vmwindow_image_os}"
+  vm_count = "${var.vmwindow_vm_count}"
   location = "${var.vmwindow_location}"
   name = "${var.vmwindow_name}"
   os_disk = "${var.vmwindow_os_disk}"
