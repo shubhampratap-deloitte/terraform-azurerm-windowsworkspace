@@ -20,7 +20,7 @@ variable "vmwindow_vm_count" {}
 // Modules
 module "vmwindow" {
   source  = "app.terraform.io/edj_demo_org_000/vmwindow/azurerm"
-  version = "1.0.31"
+  version = "1.0.33"
 
 
   admin_password = "${var.vmwindow_admin_password}"
@@ -40,7 +40,7 @@ module "vmwindow" {
   tenant_id = "${var.vmwindow_tenant_id}"
   tags = "${var.vmwindow_tags}"
 
-  
+
 }
 
 
